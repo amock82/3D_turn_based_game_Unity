@@ -61,7 +61,7 @@ public class InputManager : MonoBehaviour
                 {
                     TargetManager.instance.TargetMove(hit.transform.gameObject);
 
-                    Debug.Log(hit.transform.gameObject);
+                    //Debug.Log(hit.transform.gameObject);
                 }
             }
         }

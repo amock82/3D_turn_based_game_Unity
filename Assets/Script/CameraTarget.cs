@@ -21,7 +21,7 @@ public class CameraTarget : MonoBehaviour
         instance = this;
     }
 
-    void Update()
+    void LateUpdate()
     {
         targetTimer -= Time.deltaTime;
         rotateTimer -= Time.deltaTime;

@@ -53,13 +53,19 @@
     <UnityVersion>2020.3.16f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\Script\InputManager.cs" />
-    <Compile Include="Assets\Script\Pawn.cs" />
-    <Compile Include="Assets\Script\CameraMoving.cs" />
-    <Compile Include="Assets\Script\MainCamera.cs" />
     <Compile Include="Assets\Script\CameraTarget.cs" />
-    <Compile Include="Assets\Script\TargetManager.cs" />
+    <Compile Include="Assets\Script\InputManager.cs" />
+    <Compile Include="Assets\Script\MainCamera.cs" />
     <Compile Include="Assets\Script\GameManager.cs" />
+    <Compile Include="Assets\Script\TurnManager.cs" />
+    <Compile Include="Assets\Script\EnemyPawn.cs" />
+    <Compile Include="Assets\Script\MoveManager.cs" />
+    <Compile Include="Assets\Script\Tile.cs" />
+    <Compile Include="Assets\Script\Pawn.cs" />
+    <Compile Include="Assets\Script\TargetManager.cs" />
+    <Compile Include="Assets\Script\CameraMoving.cs" />
+    <Compile Include="Assets\Script\PawnUI.cs" />
+    <Compile Include="Assets\Script\GridTileManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
