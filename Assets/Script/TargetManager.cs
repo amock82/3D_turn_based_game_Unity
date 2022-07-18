@@ -210,6 +210,8 @@ public class TargetManager : MonoBehaviour
 
         MoveManager.instance.CalcMovable(_targetObjects[targetNum]);
 
+
+        // 이하 코드는 장애물을 가정하지 않은 이동거리 측정
         //targetPos.y = 0;
 
         //for (int i = 0; i < _moveTile.Length; i++)

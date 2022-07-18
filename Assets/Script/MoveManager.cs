@@ -108,7 +108,7 @@ public class MoveManager : MonoBehaviour
             _moveTile[_tileNum].material = _moveMaterial[0];
         }
 
-        if (_tileNum % gridX != 0 && _tileNum % gridX != 9)
+        if (_tileNum % gridX != 0 && _tileNum % gridX != gridX - 1)
         {
             CheckCost(remainingDistance, 2, _tileNum - 1, pawnMob);
             CheckCost(remainingDistance, 2, _tileNum + 1, pawnMob);
@@ -129,7 +129,7 @@ public class MoveManager : MonoBehaviour
             CheckCost(remainingDistance, 2 * Mathf.Sqrt(2), _tileNum - gridY + 1, pawnMob);
             CheckCost(remainingDistance, 2 * Mathf.Sqrt(2), _tileNum + gridY + 1, pawnMob);
         }
-        else if (_tileNum % gridX == 9)
+        else if (_tileNum % gridX == gridX - 1)
         {
             CheckCost(remainingDistance, 2, _tileNum - 1, pawnMob);
             CheckCost(remainingDistance, 2, _tileNum - gridY, pawnMob);

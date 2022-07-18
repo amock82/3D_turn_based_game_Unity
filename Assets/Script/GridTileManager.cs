@@ -16,9 +16,6 @@ public class GridTileManager : MonoBehaviour
 
         x = this.GetComponent<RectTransform>().rect.width / this.GetComponent<GridLayoutGroup>().cellSize.x;
         y = this.GetComponent<RectTransform>().rect.height / this.GetComponent<GridLayoutGroup>().cellSize.y;
-
-        Debug.Log(x);
-        Debug.Log(y);
     }
 
 }

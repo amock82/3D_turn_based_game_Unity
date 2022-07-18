@@ -63,9 +63,15 @@
     <Compile Include="Assets\Script\Tile.cs" />
     <Compile Include="Assets\Script\Pawn.cs" />
     <Compile Include="Assets\Script\TargetManager.cs" />
+    <Compile Include="Assets\Script\GridTileManager.cs" />
     <Compile Include="Assets\Script\CameraMoving.cs" />
     <Compile Include="Assets\Script\PawnUI.cs" />
-    <Compile Include="Assets\Script\GridTileManager.cs" />
+    <Compile Include="Assets\Script\FieldOfView.cs" />
+    <Compile Include="Assets\Script\FieldOfViewEditor.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Shaders\StencilObject.shader" />
+    <None Include="Assets\Shaders\StencilMask.shader" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
