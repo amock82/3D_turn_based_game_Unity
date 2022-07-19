@@ -5,6 +5,11 @@ using UnityEngine;
 public class CameraMoving : MonoBehaviour
 {
     bool up, down, left, right;
+    float zoom;
+    float maxZoom;
+    float zoomPower;
+    Transform _cameraTransform;
+
 
     private void Start()
     {
@@ -12,13 +17,38 @@ public class CameraMoving : MonoBehaviour
         down = false;
         left = false;
         right = false;
+
+        zoom = 0;
+        maxZoom = 1.5f;
+        zoomPower = 10;
+        _cameraTransform = GameObject.Find("Main Camera").transform;
     }
 
-    private void Update()
+    private void LateUpdate()
     {
         if (up || down || left || right)
         {
             CameraTarget.instance.CameraMove(up, down, left, right);
+        }
+
+        if (Input.GetAxis("Mouse ScrollWheel") != 0)
+        {
+            if (Input.GetAxis("Mouse ScrollWheel") > 0 && zoom < maxZoom)
+            {
+                _cameraTransform.position += Vector3.Normalize(_cameraTransform.forward) * Input.GetAxis("Mouse ScrollWheel") * zoomPower;
+                zoom += Input.GetAxis("Mouse ScrollWheel");
+                
+                if (zoom > maxZoom)
+                    zoom = maxZoom;
+            }
+            else if (Input.GetAxis("Mouse ScrollWheel") < 0 && zoom > 0)
+            {
+                _cameraTransform.position += Vector3.Normalize(_cameraTransform.forward) * Input.GetAxis("Mouse ScrollWheel") * zoomPower;
+                zoom += Input.GetAxis("Mouse ScrollWheel");
+
+                if (zoom < 0)
+                    zoom = 0;
+            }
         }
     }
 
